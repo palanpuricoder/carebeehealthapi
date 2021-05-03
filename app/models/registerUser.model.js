@@ -7,7 +7,8 @@ module.exports = mongoose => {
       PhoneNumber: String,
       DateOfBirth: String,
       Weight: String,
-      Height: String
+      Height: String,
+      AxietyTestScore: String
     },
     { timestamps: true }
   );

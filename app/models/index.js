@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.UserModel = require("./registerUser.model.js")(mongoose);
+db.AnxietyModel =  require("./anxietyTest.model")(mongoose);
 
 module.exports = db;

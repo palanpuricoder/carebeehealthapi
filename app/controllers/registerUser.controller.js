@@ -22,7 +22,7 @@ exports.createUser = (req, res) => {
     PhoneNumber: req.body.PhoneNumber,
     DateOfBirth: req.body.DateOfBirth,
     Weight: req.body.Weight,
-    Height: req.body.Height
+    Height: req.body.Height,
   });
 
   // console.log(UserDetails.Password)
@@ -42,19 +42,20 @@ exports.createUser = (req, res) => {
 
 // Retrieve all Tutorials from the database.
 // exports.findAll = (req, res) => {
-//   const title = req.query.title;
-//   var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+//   console.log(req.body)
+  // const title = req.query.title;
+  // var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
 
-//   Tutorial.find(condition)
-//     .then(data => {
-//       res.send(data);
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while retrieving tutorials."
-//       });
-//     });
+  // Tutorial.find(condition)
+  //   .then(data => {
+  //     res.send(data);
+  //   })
+  //   .catch(err => {
+  //     res.status(500).send({
+  //       message:
+  //         err.message || "Some error occurred while retrieving tutorials."
+  //     });
+  //   });
 // };
 
 // Find a single Tutorial with an id
@@ -154,3 +155,7 @@ exports.findAllPublished = (req, res) => {
       });
     });
 };
+
+// exports.anxietyTestScore = (req, res) => {
+//   console.log(req.body)
+// };

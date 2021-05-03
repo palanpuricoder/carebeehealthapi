@@ -1,5 +1,6 @@
 module.exports = app => {
   const CarebeeController = require("../controllers/registerUser.controller.js");
+  const AnxietyController = require("../controllers/anxietyTest.controller");
 
   var router = require("express").Router();
 
@@ -7,7 +8,7 @@ module.exports = app => {
   router.post("/", CarebeeController.createUser);
 
   // Retrieve all Tutorials
-  // router.get("/", tutorials.findAll);
+  router.post("/anxiety", AnxietyController.anxietyTestScore);
 
   // // Retrieve all published Tutorials
   // router.get("/published", tutorials.findAllPublished);
@@ -17,6 +18,8 @@ module.exports = app => {
 
   // // Update a Tutorial with id
   router.put("/update/:id", CarebeeController.updateUserInfo);
+
+  router.post("/anxietyScore", AnxietyController.anxietyTestScore )
 
   // // Delete a Tutorial with id
   // router.delete("/:id", tutorials.delete);
